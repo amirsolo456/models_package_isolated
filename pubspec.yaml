@@ -1,7 +1,7 @@
 name: models_package
 description: "aryan front models"
 version: 0.0.1
-
+publish_to: none
 
 environment:
   sdk: ^3.9.2

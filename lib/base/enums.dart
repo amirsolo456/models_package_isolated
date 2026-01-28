@@ -77,6 +77,8 @@ extension SessionKeysExt on SessionKeys {
   }
 }
 
+enum PageType { listGenerator, formGenerator, tabBar }
+
 enum LoginResultType {
   success,
   error,

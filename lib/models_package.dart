@@ -1,5 +1,5 @@
 // ignore_for_file: undefined_shown_name, unused_import
-library shared_model;
+library;
 
 import 'package:shared_core/data/com/person/request.dart' as pReq;
 import 'package:shared_core/index.dart' as models;
