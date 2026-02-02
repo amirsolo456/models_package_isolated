@@ -1,5 +1,7 @@
 // ignore_for_file: unused_element
 
+import 'dart:ui';
+
 import 'package:json_annotation/json_annotation.dart';
 import 'package:shared_core/data/auth/management_account/response_data.dart';
 import 'package:shared_core/data/auth/user/user_dto/response_data.dart';
@@ -56,11 +58,27 @@ class LoginModuleResult {
     required this.selectedManagementAccount,
   }) : resultType = LoginResultType.success;
 
-  LoginModuleResult.beforeLogin({
+  // LoginModuleResult.loginBlocArgs({
+  //
+  //
+  //   required this.deviceToken,
+  //   required this.networkMode,
+  //   required this.language,
+  //
+  //
+  // }) : resultType = LoginResultType.success,
+  //       success = false,
+  //       error = null,
+  //       userDto = null,
+  //       cachedKey = null,
+  //       token = null,
+  //       selectedManagementAccount = null,
+  //       managementAccount = null;
+
+  LoginModuleResult.loginBlocArgs({
     required this.deviceToken,
     required this.networkMode,
     required this.language,
-
     required this.timestamp,
   }) : resultType = LoginResultType.success,
        success = false,
@@ -70,6 +88,17 @@ class LoginModuleResult {
        token = null,
        selectedManagementAccount = null,
        managementAccount = null;
+
+  LoginModuleResult.loginBlocArgsSimple({
+    String deviceToken = '',
+    int networkMode = 0,
+    LanguageModel? language,
+  }) : this.loginBlocArgs(
+         deviceToken: deviceToken,
+         networkMode: networkMode,
+         language: language ?? LanguageModel(languageCode: 'fa'),
+         timestamp: DateTime.now(),
+       );
 
   LoginModuleResult.failure(String message)
     : success = false,
@@ -115,5 +144,18 @@ class LoginModuleResult {
       resultType: resultType,
       networkMode: login.networkMode,
     );
+  }
+
+  Locale get locale {
+    final code = language?.languageCode;
+
+    switch (code) {
+      case 'fa':
+        return const Locale('fa');
+      case 'en':
+        return const Locale('en');
+      default:
+        return const Locale('fa'); // fallback امن
+    }
   }
 }

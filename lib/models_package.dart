@@ -2,7 +2,7 @@
 library;
 
 import 'package:shared_core/data/com/person/request.dart' as pReq;
-import 'package:shared_core/index.dart' as models;
+// import 'package:shared_core/index.dart' as models;
 
 export 'package:shared_core/data/auth/user/response_data.dart' show User;
 export 'package:shared_core/data/com/person/request.dart' show personReqiest;
