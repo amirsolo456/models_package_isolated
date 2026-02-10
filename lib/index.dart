@@ -1,8 +1,8 @@
 library;
 
-export 'package:shared_core/base_request.dart';
-export 'package:shared_core/base_response.dart';
-export 'package:shared_core/data/default/response_data.dart';
+export 'package:shared_core/base_request.dart' show baseRequest;
+export 'package:shared_core/base_response.dart' show baseRequest;
+export 'package:shared_core/data/default/response_data.dart' show defaults;
 
 
 export 'base/api_settings.dart';
