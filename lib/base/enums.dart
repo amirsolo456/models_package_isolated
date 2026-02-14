@@ -7,7 +7,8 @@ enum AppBarsMode {
   erpGenericList(5),
   erpGenericForm(6),
   erpNotFound(7),
-  erpDashboardMode(10);
+  erpDashboardMode(10),
+  erpUserInfo(11);
 
   final int value;
 
@@ -24,7 +25,8 @@ enum NavButtonTabBarMode {
   erpGenericFormTabMode(6),
   erpNotFound(7),
   skeletion(8),
-  erpDashboardTabMode(10);
+  erpDashboardTabMode(10),
+  erpUserInfo(11);
 
   final int value;
 
