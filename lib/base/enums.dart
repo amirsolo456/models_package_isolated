@@ -77,7 +77,9 @@ extension SessionKeysExt on SessionKeys {
   }
 }
 
-enum PageType { listGenerator, formGenerator, tabBar }
+
+enum DrawerItemType { Item, Tittle, Divider,  Image }
+enum PageType { listGenerator, formGenerator, tabBar,common }
 
 enum LoginResultType {
   success,

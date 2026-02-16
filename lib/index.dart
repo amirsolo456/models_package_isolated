@@ -19,3 +19,4 @@ export 'base/action_buttons.dart';
 export 'base/generic_models.dart';
 export 'base/form_generic_model.dart';
 export 'base/list_generic_model.dart';
+export 'base/drawer_item_model.dart';
