@@ -21,3 +21,4 @@ export 'base/form_generic_model.dart';
 export 'base/list_generic_model.dart';
 export 'base/drawer_item_model.dart';
 export 'base/radio_values_model.dart';
+export 'base/field_model.dart';
