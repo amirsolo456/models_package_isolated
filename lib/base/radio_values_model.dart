@@ -4,12 +4,14 @@ class RadioValuesModel extends RadioValues {
   RadioValuesModel({
     required String caption,
     required Object? value,
-  }) : super(caption: caption, value: value);
+    required String type
+  }) : super(caption: caption, value: value,type:type );
 
   factory RadioValuesModel.fromRadioValues(RadioValues r) {
     return RadioValuesModel(
       caption: r.caption,
       value: r.value,
+      type: r.type
     );
   }
 }

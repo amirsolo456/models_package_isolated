@@ -1,8 +1,4 @@
 import 'package:shared_core/data/auth/toolbar/field.dart';
-import 'package:shared_core/data/auth/toolbar/radio_values.dart';
-import 'package:shared_core/data/auth/toolbar/rule.dart';
-import 'package:shared_core/data/auth/toolbar/select.dart';
-import 'package:shared_core/data/auth/toolbar/select_endpoint.dart';
 
 class FieldModel extends Field {
   FieldModel() : super();
