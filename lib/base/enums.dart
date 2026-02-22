@@ -7,8 +7,7 @@ enum AppBarsMode {
   erpGenericList(5),
   erpGenericForm(6),
   erpNotFound(7),
-  erpDashboardMode(10),
-  erpUserInfo(11);
+  erpDashboardMode(10);
 
   final int value;
 
@@ -25,8 +24,7 @@ enum NavButtonTabBarMode {
   erpGenericFormTabMode(6),
   erpNotFound(7),
   skeletion(8),
-  erpDashboardTabMode(10),
-  erpUserInfo(11);
+  erpDashboardTabMode(10);
 
   final int value;
 
@@ -79,6 +77,8 @@ extension SessionKeysExt on SessionKeys {
   }
 }
 
+
+enum DrawerItemType { Item, Tittle, Divider,  Image }
 enum PageType { listGenerator, formGenerator, tabBar,common }
 
 enum LoginResultType {
