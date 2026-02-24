@@ -1,22 +1,24 @@
 import 'package:shared_core/data/base_data/base_data.dart';
 
 class SelectResponseDataModel extends SelectResponseData {
-  bool isExpanded;
-  @override
-  final int id;
-  @override
-  final String? title;
-  @override
-  final String? displayTitle;
-  @override
-  final List<SelectResponseDataModel>? subItems;
-  SelectResponseDataModel(
-      this.isExpanded, {
-        required this.id,
-        this.title,
-        this.displayTitle,
-        this.subItems,
-      });
-  // SelectResponseDataModel(this.isExpanded,
-  //     {required this.id, this.title, this.displayTitle, this.subItems});
+  final bool isExpanded;
+
+  SelectResponseDataModel({
+    required super.id,
+    super.title,
+    super.displayTitle,
+    List<SelectResponseDataModel>? subItems,
+    this.isExpanded = false,
+  }) : super(subItems: subItems);
+
+
+  factory SelectResponseDataModel.fromSuper(SelectResponseData base, {bool isExpanded = false}) {
+    return SelectResponseDataModel(
+      id: base.id,
+      title: base.title,
+      displayTitle: base.displayTitle,
+      subItems: base.subItems?.map((e) => SelectResponseDataModel.fromSuper(e)).toList(),
+      isExpanded: isExpanded,
+    );
+  }
 }
