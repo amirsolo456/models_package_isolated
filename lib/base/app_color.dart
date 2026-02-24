@@ -16,6 +16,8 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color optionalColor4;
   final Color splashTransparent;
   final Color hoverTransparent;
+  final Color scaffoldColor;
+  final Color appBarsColor;
 
   const AppColors({
     required this.primary,
@@ -32,6 +34,8 @@ class AppColors extends ThemeExtension<AppColors> {
     required this.hoverTransparent,
     required this.shadowColors,
     required this.optionalColor4,
+    required this.scaffoldColor,
+    required this.appBarsColor,
   });
 
   // copyWith برای تغییر تدریجی
@@ -50,6 +54,8 @@ class AppColors extends ThemeExtension<AppColors> {
     Color? optional3,
     Color? splashTransparent,
     Color? hoverTransparent,
+    Color? scaffoldColor,
+    Color? appBarColor,
   }) {
     return AppColors(
       primary: primary ?? this.primary,
@@ -66,6 +72,8 @@ class AppColors extends ThemeExtension<AppColors> {
       hoverTransparent: hoverTransparent ?? this.hoverTransparent,
       shadowColors: shadowColors ?? this.shadowColors,
       optionalColor4: optionalColor4,
+      scaffoldColor: scaffoldColor ?? this.scaffoldColor,
+      appBarsColor:  appBarsColor  ,
     );
   }
 
@@ -96,6 +104,8 @@ class AppColors extends ThemeExtension<AppColors> {
       )!,
       shadowColors: Color.lerp(shadowColors, other.selection, t)!,
       optionalColor4: Color.lerp(optionalColor4, other.selection, t)!,
+      scaffoldColor: Color.lerp(scaffoldColor, other.selection, t)!,
+      appBarsColor: Color.lerp(appBarsColor, other.selection, t)!,
     );
   }
 }
