@@ -2,10 +2,10 @@ name: models_package
 description: "aryan front models"
 version: 0.0.1
 publish_to: none
-
+resolution: workspace
 environment:
-  sdk: ^3.9.2
-  flutter: ">=1.17.0"
+  sdk: '^3.10.1'
+  flutter: ">=3.0.0"
 
 dependencies:
   flutter:
@@ -19,7 +19,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
   json_serializable: ^6.7.0
 
   build_runner: ^2.4.6
@@ -60,7 +60,7 @@ flutter:
   #         weight: 700
   #
   # For details regarding fonts in packages, see
-  # https://flutter.dev/to/font-from-package
-dependency_overrides:
-  shared_core:
-    path: ../shared_core
+#  # https://flutter.dev/to/font-from-package
+#dependency_overrides:
+#  shared_core:
+#    path: ../shared_core
